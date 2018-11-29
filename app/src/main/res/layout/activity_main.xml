@@ -1,18 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
     <TextView
+
+        style="@style/Label"
+        android:id="@+id/welcome"
+        android:text="@string/welcome"         />
+    <TextView
+
+        style="@style/Label"
+        android:id="@+id/title"
+        android:text="@string/app_name"
+        android:layout_below="@+id/welcome"/>
+    <Button
+        style="@style/Button"
+        android:id="@+id/start"
+        android:layout_below="@id/title"
+        android:layout_width="2in"
+        android:background="@drawable/mybutton"
+        android:outlineAmbientShadowColor="@color/Black"
+        android:onClick="StartGame"
+
+        />
+    <Button
+        style="@style/Button"
+        android:id="@+id/Instructions"
+        android:layout_below="@id/start"
+        android:layout_width="2in"
+        android:background="@drawable/bluebutton"
+        android:text="Instructions"
+        android:onClick="GiveInstructions"
+        />
+
+
+    <Button
+        style="@style/Button"
+        android:id="@+id/question_add"
+        android:layout_below="@id/Instructions"
+        android:layout_width="2in"
+        android:background="@drawable/greenbutton"
+        android:text="Add A Question"
+        />
+    <Button
+        style="@style/Button"
+        android:id="@+id/highScoreButton"
+        android:layout_below="@id/question_add"
+        android:layout_width="2in"
+        android:background="@drawable/mybutton"
+        android:text="High Score Leader Board"
+        android:onClick="GiveInstructions"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/SmartyImage"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/smarty"
+         />
 
-</android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

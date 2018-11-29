@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">trythis</string>
+    <string name="app_name">Smarty Smart Sticks</string>
+    <string name="welcome">Welcome to </string>
+    <string name="start_button">START</string>
+    <string name="bestScore"></string>
 </resources>
