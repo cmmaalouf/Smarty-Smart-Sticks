@@ -53,7 +53,7 @@
         android:id="@+id/highScoreButton"
         android:layout_below="@id/question_add"
         android:layout_width="2in"
-        android:background="@drawable/mybutton"
+        android:background="@drawable/yellowbutton"
         android:text="High Score Leader Board"
         android:onClick="GiveInstructions"
         />
