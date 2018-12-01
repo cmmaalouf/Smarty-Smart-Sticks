@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+
+        style="@style/Label"
+        android:id="@+id/pickStick"
+        android:text="@string/pickStick"
+        android:fontFamily="monospace"
+        android:layout_alignParentTop="true"/>
+
+    <Button
+        android:id="@+id/start"
+        style="@style/Button"
+        android:layout_width="50dp"
+        android:layout_height="400dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft= "60dp"
+        android:background="@drawable/mybutton"
+        android:onClick="getQuestion"
+        />
+
+    <Button
+        style="@style/Button"
+        android:id="@+id/Instructions"
+        android:layout_toRightOf="@id/start"
+        android:layout_marginLeft="20dp"
+        android:layout_width="50dp"
+        android:layout_height="400dp"
+        android:background="@drawable/bluebutton"
+        android:onClick="getQuestion"
+        />
+
+    <Button
+        style="@style/Button"
+        android:id="@+id/question_add"
+        android:layout_toRightOf="@id/Instructions"
+        android:layout_marginLeft="20dp"
+        android:layout_width="50dp"
+        android:layout_height="400dp"
+        android:background="@drawable/greenbutton"
+        android:onClick="getQuestion"
+        />
+    <Button
+        style="@style/Button"
+        android:id="@+id/highScoreButton"
+        android:layout_toRightOf="@id/question_add"
+        android:layout_marginLeft="20dp"
+        android:layout_width="50dp"
+        android:layout_height="400dp"
+        android:background="@drawable/yellowbutton"
+        android:onClick="getQuestion"
+        />
+
+
+
+</RelativeLayout>

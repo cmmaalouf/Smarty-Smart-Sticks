@@ -6,18 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
     <TextView
-
         style="@style/Label"
         android:id="@+id/welcome"
+        android:fontFamily="monospace"
         android:text="@string/welcome"         />
-    <TextView
 
+    <TextView
         style="@style/Label"
         android:id="@+id/title"
         android:text="@string/app_name"
+        android:fontFamily="monospace"
         android:layout_below="@+id/welcome"/>
     <Button
         style="@style/Button"
@@ -26,6 +25,7 @@
         android:layout_width="2in"
         android:background="@drawable/mybutton"
         android:outlineAmbientShadowColor="@color/Black"
+        android:text="Start"
         android:onClick="StartGame"
 
         />

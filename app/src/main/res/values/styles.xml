@@ -27,7 +27,24 @@
         <item name = "android:layout_height">wrap_content</item>
         <item name="android:background">@color/Orange</item>
         <item name="android:textColor">@color/Black</item>
-        <item name="android:text">@string/start_button</item>
+    </style>
+
+    <style name="QuestionStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@color/Yellow</item>
+    </style>
+
+    <style name="InputStyle">
+        <item name="android:background">@color/Orange</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_centerHorizontal">true</item>
     </style>
 
 </resources>

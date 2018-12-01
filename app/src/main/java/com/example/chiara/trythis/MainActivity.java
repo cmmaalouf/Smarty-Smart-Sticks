@@ -7,8 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-
 public class MainActivity extends AppCompatActivity {
+
+    public static SSS smartySmart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Intent myIntent = new Intent( this,
                 GameActivity.class );
         this.startActivity( myIntent );
+        overridePendingTransition( R.anim.zoom_in, 0 );
 
     }
 
