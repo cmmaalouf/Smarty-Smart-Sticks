@@ -11,7 +11,7 @@
         style="@style/Label"
         android:id="@+id/pickStick"
         android:text="@string/pickStick"
-        android:fontFamily="monospace"
+        android:fontFamily="casual"
         android:layout_alignParentTop="true"/>
 
     <Button
