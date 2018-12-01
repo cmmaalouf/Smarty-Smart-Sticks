@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
         alertDialog.setTitle("Instructions");
         alertDialog.setMessage("Each player gets 5 sticks\n\nPick a stick to get a queston\n\nAnswer Correctly: You get a point!\n\n" +
-                "Answer Incorrectly: You are told the answer and will have another opportunity to win the point.\n\n The player who gets all 5 points first wins!");
+                "Answer Incorrectly: You are told the answer and will have another opportunity to win the point.\n\nThe player who gets all 5 points first wins!");
         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {

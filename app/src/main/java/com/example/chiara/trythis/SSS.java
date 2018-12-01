@@ -2,7 +2,7 @@ package com.example.chiara.trythis;
 
 public class SSS {
 
-    private String question = "";
+    private String question;
 
     public void setQuestion( String newQuestion ) {
         question = newQuestion;

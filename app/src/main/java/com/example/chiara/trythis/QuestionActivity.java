@@ -9,21 +9,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class QuestionActivity extends Activity {
+    public static SSS smartySmart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
 
-        SSS smartySmart = MainActivity.smartySmart;
-        //EditText wordET = (EditText) findViewById(R.id.word_enter);
-
         TextView questionTV = (TextView) findViewById(R.id.question);
 
-        //smartySmart.setQuestion("TEST");
+        smartySmart.setQuestion("TEST QUESTION");
 
-        questionTV.setText("Here is your question" /*+ smartySmart.getQuestion()*/ );
+        questionTV.setText("Here is your question" /*+ smartySmart.getQuestion() */);
     }
-
 
     public void checkAnswer( View v)
     {
@@ -32,8 +29,8 @@ public class QuestionActivity extends Activity {
         if (answer.equals("hello"))
         {
             AlertDialog alertDialog = new AlertDialog.Builder(QuestionActivity.this).create();
-            alertDialog.setTitle("Check");
-            alertDialog.setMessage("Correct!");
+            alertDialog.setTitle("You're Correct!");
+            alertDialog.setMessage("You got the question correct.\nNow pass the phone to the other player.");
             alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
@@ -45,8 +42,8 @@ public class QuestionActivity extends Activity {
         else
         {
             AlertDialog alertDialog = new AlertDialog.Builder(QuestionActivity.this).create();
-            alertDialog.setTitle("Check");
-            alertDialog.setMessage("Sorry that's wrong!");
+            alertDialog.setTitle("Incorrect!");
+            alertDialog.setMessage("Don't worry, you'll have another chance!\nThe correct answer was: \nNow pass the phone to the other player.");
             alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
