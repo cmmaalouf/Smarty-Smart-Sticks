@@ -15,21 +15,21 @@
         android:layout_alignParentTop="true"/>
 
     <Button
-        android:id="@+id/start"
+        android:id="@+id/orangeStick"
         style="@style/Button"
         android:layout_width="50dp"
         android:layout_height="400dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft= "60dp"
+        android:layout_marginLeft="20dp"
         android:background="@drawable/mybutton"
         android:onClick="getQuestion"
         />
 
     <Button
         style="@style/Button"
-        android:id="@+id/Instructions"
-        android:layout_toRightOf="@id/start"
+        android:id="@+id/blueStick"
+        android:layout_toRightOf="@id/orangeStick"
         android:layout_marginLeft="20dp"
         android:layout_width="50dp"
         android:layout_height="400dp"
@@ -39,8 +39,8 @@
 
     <Button
         style="@style/Button"
-        android:id="@+id/question_add"
-        android:layout_toRightOf="@id/Instructions"
+        android:id="@+id/greenStick"
+        android:layout_toRightOf="@id/blueStick"
         android:layout_marginLeft="20dp"
         android:layout_width="50dp"
         android:layout_height="400dp"
@@ -49,15 +49,24 @@
         />
     <Button
         style="@style/Button"
-        android:id="@+id/highScoreButton"
-        android:layout_toRightOf="@id/question_add"
+        android:id="@+id/yellowStick"
+        android:layout_toRightOf="@id/greenStick"
         android:layout_marginLeft="20dp"
         android:layout_width="50dp"
         android:layout_height="400dp"
         android:background="@drawable/yellowbutton"
         android:onClick="getQuestion"
         />
-
+    <Button
+        style="@style/Button"
+        android:id="@+id/redStick"
+        android:layout_toRightOf="@id/yellowStick"
+        android:layout_marginLeft="20dp"
+        android:layout_width="50dp"
+        android:layout_height="400dp"
+        android:background="@drawable/redbutton"
+        android:onClick="getQuestion"
+        />
 
 
 </RelativeLayout>
