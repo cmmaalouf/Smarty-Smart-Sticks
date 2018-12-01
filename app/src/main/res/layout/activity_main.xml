@@ -47,6 +47,7 @@
         android:layout_width="2in"
         android:background="@drawable/greenbutton"
         android:text="Add A Question"
+        android:onClick="addQuestion"
         />
     <Button
         style="@style/Button"

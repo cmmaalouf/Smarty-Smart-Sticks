@@ -68,5 +68,4 @@
         android:onClick="getQuestion"
         />
 
-
 </RelativeLayout>

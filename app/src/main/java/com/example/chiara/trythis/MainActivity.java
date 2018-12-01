@@ -27,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void addQuestion(View view) {
+        Intent myIntent = new Intent( this,
+                ServerActivity.class );
+        this.startActivity( myIntent );
+        overridePendingTransition( R.anim.zoom_in, 0 );
+
+    }
+
     public void GiveInstructions(View view)
     {
         AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
