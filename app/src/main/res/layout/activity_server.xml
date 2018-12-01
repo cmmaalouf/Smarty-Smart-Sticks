@@ -10,7 +10,9 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question "
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="Question "
         android:id="@+id/question"
         />
 
@@ -18,8 +20,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/answer"
+        android:layout_marginLeft="20dp"
         android:layout_below="@id/question"
-        android:text="Answer "
+        android:hint="Answer "
         android:layout_marginTop="10dp"
         />
 
@@ -28,7 +31,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/author"
         android:layout_below="@id/answer"
-        android:text="Author "
+        android:layout_marginLeft="20dp"
+        android:hint="Author "
         android:layout_marginTop="10dp"
         />
 
@@ -36,9 +40,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_below="@id/author"
         android:onClick="serverComm"
+        android:text="Submit"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/returnbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/button"
+        android:onClick="goback"
+        android:text="Return to Main Screen"
         />
 
 
@@ -46,8 +63,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="From server: "
+        android:layout_marginLeft="20dp"
         android:id="@+id/all"
-        android:layout_below="@id/button"
+        android:layout_below="@id/returnbutton"
         android:layout_marginTop="10dp"
         />
 

@@ -15,21 +15,21 @@
         android:layout_alignParentTop="true"/>
 
     <Button
-        android:id="@+id/orangeStick"
+        android:id="@+id/stick1"
         style="@style/Button"
         android:layout_width="50dp"
         android:layout_height="400dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_marginLeft="20dp"
-        android:background="@drawable/mybutton"
+        android:background="@drawable/bluebutton"
         android:onClick="getQuestion"
         />
 
     <Button
         style="@style/Button"
-        android:id="@+id/blueStick"
-        android:layout_toRightOf="@id/orangeStick"
+        android:id="@+id/stick2"
+        android:layout_toRightOf="@id/stick1"
         android:layout_marginLeft="20dp"
         android:layout_width="50dp"
         android:layout_height="400dp"
@@ -39,32 +39,32 @@
 
     <Button
         style="@style/Button"
-        android:id="@+id/greenStick"
-        android:layout_toRightOf="@id/blueStick"
+        android:id="@+id/stick3"
+        android:layout_toRightOf="@id/stick2"
         android:layout_marginLeft="20dp"
         android:layout_width="50dp"
         android:layout_height="400dp"
-        android:background="@drawable/greenbutton"
+        android:background="@drawable/bluebutton"
         android:onClick="getQuestion"
         />
     <Button
         style="@style/Button"
-        android:id="@+id/yellowStick"
-        android:layout_toRightOf="@id/greenStick"
+        android:id="@+id/stick4"
+        android:layout_toRightOf="@id/stick3"
         android:layout_marginLeft="20dp"
         android:layout_width="50dp"
         android:layout_height="400dp"
-        android:background="@drawable/yellowbutton"
+        android:background="@drawable/bluebutton"
         android:onClick="getQuestion"
         />
     <Button
         style="@style/Button"
-        android:id="@+id/redStick"
-        android:layout_toRightOf="@id/yellowStick"
+        android:id="@+id/stick5"
+        android:layout_toRightOf="@id/stick4"
         android:layout_marginLeft="20dp"
         android:layout_width="50dp"
         android:layout_height="400dp"
-        android:background="@drawable/redbutton"
+        android:background="@drawable/bluebutton"
         android:onClick="getQuestion"
         />
 

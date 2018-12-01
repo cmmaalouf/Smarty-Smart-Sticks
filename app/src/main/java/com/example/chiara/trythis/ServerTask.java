@@ -29,8 +29,6 @@ public class ServerTask extends AsyncTask<String, Void, String> {
 
     public String doInBackground( String... urls )
     {
-
-        Log.w("MA", "Question: " + question + " Answer: " + answer + " Author: " + author);
         String result = "";
         try
         {
