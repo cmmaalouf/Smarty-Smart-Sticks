@@ -2,9 +2,17 @@ package com.example.chiara.trythis;
 
 public class SSS {
 
-    private String question = "TEST";
+    private String question;
     private int score;
-    private boolean over = false;
+    private boolean over;
+    private int turn;
+
+    public SSS()
+    {
+        question ="Test";
+        over = false;
+        turn =1;
+    }
 
     public void setQuestion( String newQuestion ) {
         question = newQuestion;
@@ -26,5 +34,18 @@ public class SSS {
     public String getScore( ) {
         return question ;
     }
+
+    public int getTurn()
+    {
+        return turn;
+    }
+
+    public int nextTurn()
+    {
+        turn = turn+1;
+        return turn;
+    }
+
+
 
 }
