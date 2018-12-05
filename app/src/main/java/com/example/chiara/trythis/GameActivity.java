@@ -26,14 +26,14 @@ public class GameActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        int turn = smartySmart.nextTurn();
-        Log.w( "MainActivity", "turn = " + turn);
-        if (turn%2 ==1)
+        Log.w( "MainActivity", "turn = " + smartySmart.getTurn());
+        if (smartySmart.getTurn()%2 ==1)
         {
+            Log.w( "MainActivity", "in odd player turn = " + smartySmart.getTurn());
             Button buttonID1 = (Button) findViewById(R.id.stick1);
-            buttonID1.setBackgroundColor(Color.RED);
+            buttonID1.setBackgroundResource(R.drawable.redbutton);
             Button buttonID2 = (Button) findViewById(R.id.stick2);
-            buttonID2.setBackgroundColor(Color.RED);
+            buttonID2.setBackgroundResource(R.drawable.redbutton);
             Button buttonID3 = (Button) findViewById(R.id.stick3);
             buttonID3.setBackgroundResource(R.drawable.redbutton);
             Button buttonID4 = (Button) findViewById(R.id.stick4);
@@ -43,6 +43,7 @@ public class GameActivity extends Activity {
         }
         else
         {
+            Log.w( "MainActivity", "in even player turn = " + smartySmart.getTurn());
             Button buttonID1 = (Button) findViewById(R.id.stick1);
             buttonID1.setBackgroundColor(Color.BLUE);
             Button buttonID2 = (Button) findViewById(R.id.stick2);
@@ -58,6 +59,7 @@ public class GameActivity extends Activity {
     }
 
     public void getQuestion(View view) {
+
         Intent myIntent = new Intent( this,
                 QuestionActivity.class );
         this.startActivity( myIntent );

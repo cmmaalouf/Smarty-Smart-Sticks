@@ -7,22 +7,21 @@ public class SSS {
     private boolean over;
     private int turn;
 
-    public SSS()
-    {
-        question ="Test";
+    public SSS() {
+        question = "Test";
         over = false;
-        turn =1;
+        turn = 1;
     }
 
-    public void setQuestion( String newQuestion ) {
+    public void setQuestion(String newQuestion) {
         question = newQuestion;
     }
-    public String getQuestion( ) {
-        return question ;
+
+    public String getQuestion() {
+        return question;
     }
 
-    public boolean isOver()
-    {
+    public boolean isOver() {
         if (score == 5)
             over = true;
         return true;
@@ -31,25 +30,18 @@ public class SSS {
     public void incScore() {
         score = score + 1;
     }
-    public String getScore( ) {
-        return question ;
+
+    public String getScore() {
+        return question;
     }
 
-    public int getTurn()
-    {
+    public int getTurn() {
         return turn;
     }
 
-    public int nextTurn()
-    {
-        turn = turn+1;
+    public int nextTurn() {
+        turn = turn + 1;
         return turn;
     }
-
-
-
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> caedc7c30cafd5502df0fc0b4469b44da44e715f
+

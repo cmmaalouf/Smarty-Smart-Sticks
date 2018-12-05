@@ -13,18 +13,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class QuestionActivity extends Activity {
-    public static SSS smartySmart;
-    private GameActivity game = new GameActivity();
+    private GameActivity game;
+    SSS smartySmart;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        smartySmart = game.getGame();
         setContentView(R.layout.activity_question);
+        game = new GameActivity();
+        smartySmart = game.getGame();
 
         TextView questionTV = (TextView) findViewById(R.id.question);
-
         smartySmart.setQuestion("TEST QUESTION");
-
         questionTV.setText("Here is your question: " + smartySmart.getQuestion() );
     }
 
@@ -66,6 +66,8 @@ public class QuestionActivity extends Activity {
 
     public void moveon(View v)
     {
+        smartySmart.nextTurn();
+        Log.w( "MainActivity", "turn = " + smartySmart.getTurn());
         Intent myIntent = new Intent(this, GameActivity.class);
         this.startActivity(myIntent);
         overridePendingTransition(R.anim.slide_from_right, 0);
