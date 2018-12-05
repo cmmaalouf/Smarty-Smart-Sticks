@@ -14,10 +14,11 @@ import android.widget.Toast;
 
 public class QuestionActivity extends Activity {
     public static SSS smartySmart;
+    private GameActivity game = new GameActivity();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        smartySmart = new SSS( );
+        smartySmart = game.getGame();
         setContentView(R.layout.activity_question);
 
         TextView questionTV = (TextView) findViewById(R.id.question);
@@ -35,7 +36,7 @@ public class QuestionActivity extends Activity {
         {
             AlertDialog alertDialog = new AlertDialog.Builder(QuestionActivity.this).create();
             alertDialog.setTitle("You're Correct!");
-            alertDialog.setMessage("You got the question correct.\nNow pass the phone to the other player.");
+            alertDialog.setMessage("Good work!");
             alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {

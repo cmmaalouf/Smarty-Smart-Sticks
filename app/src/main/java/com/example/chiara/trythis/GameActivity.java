@@ -2,15 +2,59 @@ package com.example.chiara.trythis;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class GameActivity extends Activity {
+    public static SSS smartySmart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        smartySmart = new SSS( );
         setContentView(R.layout.activity_game);
+    }
 
+    public SSS getGame()
+    {
+        return smartySmart;
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        int turn = smartySmart.nextTurn();
+        Log.w( "MainActivity", "turn = " + turn);
+        if (turn%2 ==1)
+        {
+            Button buttonID1 = (Button) findViewById(R.id.stick1);
+            buttonID1.setBackgroundColor(Color.RED);
+            Button buttonID2 = (Button) findViewById(R.id.stick2);
+            buttonID2.setBackgroundColor(Color.RED);
+            Button buttonID3 = (Button) findViewById(R.id.stick3);
+            buttonID3.setBackgroundResource(R.drawable.redbutton);
+            Button buttonID4 = (Button) findViewById(R.id.stick4);
+            buttonID4.setBackgroundColor(Color.RED);
+            Button buttonID5 = (Button) findViewById(R.id.stick5);
+            buttonID5.setBackgroundColor(Color.RED);
+        }
+        else
+        {
+            Button buttonID1 = (Button) findViewById(R.id.stick1);
+            buttonID1.setBackgroundColor(Color.BLUE);
+            Button buttonID2 = (Button) findViewById(R.id.stick2);
+            buttonID2.setBackgroundColor(Color.BLUE);
+            Button buttonID3 = (Button) findViewById(R.id.stick3);
+            buttonID3.setBackgroundColor(Color.BLUE);
+            Button buttonID4 = (Button) findViewById(R.id.stick4);
+            buttonID4.setBackgroundColor(Color.BLUE);
+            Button buttonID5 = (Button) findViewById(R.id.stick5);
+            buttonID5.setBackgroundColor(Color.BLUE);
+        }
+        setContentView(R.layout.activity_game);
     }
 
     public void getQuestion(View view) {
@@ -18,7 +62,6 @@ public class GameActivity extends Activity {
                 QuestionActivity.class );
         this.startActivity( myIntent );
         overridePendingTransition( R.anim.slide_from_right, 0 );
-
     }
 
 }
