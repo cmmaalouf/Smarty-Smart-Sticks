@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -12,20 +13,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class QuestionActivity extends Activity {
+public class QuestionActivity extends AppCompatActivity {
     private GameActivity game;
-    SSS smartySmart;
+    private SSS sss;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
         game = new GameActivity();
-        smartySmart = game.getGame();
+        sss = game.getGame();
 
         TextView questionTV = (TextView) findViewById(R.id.question);
-        smartySmart.setQuestion("TEST QUESTION");
-        questionTV.setText("Here is your question: " + smartySmart.getQuestion() );
+        sss.setQuestion("TEST QUESTION");
+        questionTV.setText("Here is your question: " + sss.getQuestion() );
     }
 
     public void checkAnswer( View v)
@@ -66,11 +67,11 @@ public class QuestionActivity extends Activity {
 
     public void moveon(View v)
     {
-        smartySmart.nextTurn();
-        Log.w( "MainActivity", "turn = " + smartySmart.getTurn());
+        sss.nextTurn();
+        Log.w( "MainActivity", "turn = " + sss.getTurn());
         Intent myIntent = new Intent(this, GameActivity.class);
         this.startActivity(myIntent);
-        overridePendingTransition(R.anim.slide_from_right, 0);
+        overridePendingTransition(R.anim.fade_in_scale, 0);
     }
 
 

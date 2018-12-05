@@ -31,7 +31,7 @@ public class GameActivity extends Activity {
         {
             Log.w( "MainActivity", "in odd player turn = " + smartySmart.getTurn());
             Button buttonID1 = (Button) findViewById(R.id.stick1);
-            buttonID1.setBackgroundResource(R.drawable.redbutton);
+            buttonID1.setBackgroundColor(R.drawable.redbutton);
             Button buttonID2 = (Button) findViewById(R.id.stick2);
             buttonID2.setBackgroundResource(R.drawable.redbutton);
             Button buttonID3 = (Button) findViewById(R.id.stick3);
