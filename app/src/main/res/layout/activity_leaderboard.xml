@@ -95,7 +95,7 @@
         android:layout_below="@+id/fifth"
         android:layout_centerHorizontal="true"
         android:background="@color/Yellow"
-        android:text="Next Turn"
+        android:text="Back"
         android:textSize="16sp"
         android:onClick="goHome"
         />
