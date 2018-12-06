@@ -1,5 +1,7 @@
 package com.example.chiara.trythis;
 
+import java.util.HashMap;
+
 public class SSS {
 
     private String question;
@@ -8,10 +10,12 @@ public class SSS {
     private boolean over;
     private int turn;
     private String answer;
+    private HashMap<String, String> player1Questions;
+    private HashMap<String, String> player2Questions;
+
 
     public SSS() {
         question = "Test";
-        over = false;
         turn = 0;
         score1 =0;
         score2=0;
@@ -31,12 +35,6 @@ public class SSS {
 
     public String getQuestion() {
         return question;
-    }
-
-    public boolean isOver() {
-        if (score1 == 5 || score2 ==5)
-            over = true;
-        return true;
     }
 
     public void incPlay1Score() {
@@ -63,6 +61,24 @@ public class SSS {
     public int nextTurn() {
         turn = turn + 1;
         return turn;
+    }
+
+    public void setPlayer1Questions(HashMap<String, String> map)
+    {
+        this.player1Questions = map;
+    }
+
+    public void setPlayer2Questions(HashMap<String, String> map)
+    {
+        this.player2Questions = map;
+    }
+
+    public HashMap<String, String> getPlayer1Questions() {
+        return player1Questions;
+    }
+
+    public HashMap<String, String> getPlayer2Questions() {
+        return player2Questions;
     }
 }
 

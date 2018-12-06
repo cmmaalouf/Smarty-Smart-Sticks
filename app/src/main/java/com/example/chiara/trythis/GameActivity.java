@@ -43,34 +43,100 @@ public class GameActivity extends Activity {
             Log.w( "MainActivity", "in odd player turn = " + smartySmart.getTurn());
             Button buttonID1 = (Button) findViewById(R.id.stick1);
             buttonID1.setBackgroundResource(R.drawable.redbutton);
-            if (smartySmart.getPlay1Score() <=4)
+            if (smartySmart.getPlay1Score() <4)
             {
                 Button buttonID2 = (Button) findViewById(R.id.stick2);
                 buttonID2.setBackgroundResource(R.drawable.redbutton);
             }
-            if (smartySmart.getPlay1Score() <=3)
+            else
+            {
+                Button buttonID2 = (Button) findViewById(R.id.stick2);
+                buttonID2.setBackgroundResource(R.drawable.graybutton);
+                buttonID2.setEnabled(false);
+            }
+            if (smartySmart.getPlay1Score() <3)
             {
                 Button buttonID3 = (Button) findViewById(R.id.stick3);
                 buttonID3.setBackgroundResource(R.drawable.redbutton);
             }
-            Button buttonID4 = (Button) findViewById(R.id.stick4);
-            buttonID4.setBackgroundResource(R.drawable.redbutton);
-            Button buttonID5 = (Button) findViewById(R.id.stick5);
-            buttonID5.setBackgroundResource(R.drawable.redbutton);
+            else
+            {
+                Button buttonID3 = (Button) findViewById(R.id.stick3);
+                buttonID3.setBackgroundResource(R.drawable.graybutton);
+                buttonID3.setEnabled(false);
+            }
+            if (smartySmart.getPlay1Score() <2)
+            {
+                Button buttonID4 = (Button) findViewById(R.id.stick4);
+                buttonID4.setBackgroundResource(R.drawable.redbutton);
+            }
+            else
+            {
+                Button buttonID4 = (Button) findViewById(R.id.stick4);
+                buttonID4.setBackgroundResource(R.drawable.graybutton);
+                buttonID4.setEnabled(false);
+            }
+            if (smartySmart.getPlay1Score() <1)
+            {
+                Button buttonID5 = (Button) findViewById(R.id.stick5);
+                buttonID5.setBackgroundResource(R.drawable.redbutton);
+            }
+            else
+            {
+                Button buttonID5 = (Button) findViewById(R.id.stick5);
+                buttonID5.setBackgroundResource(R.drawable.graybutton);
+                buttonID5.setEnabled(false);
+            }
         }
         else
         {
-            Log.w( "MainActivity", "in even player turn = " +smartySmart.getTurn());
+            Log.w( "MainActivity", "in odd player turn = " + smartySmart.getTurn());
             Button buttonID1 = (Button) findViewById(R.id.stick1);
             buttonID1.setBackgroundResource(R.drawable.bluebutton);
-            Button buttonID2 = (Button) findViewById(R.id.stick2);
-            buttonID2.setBackgroundResource(R.drawable.bluebutton);
-            Button buttonID3 = (Button) findViewById(R.id.stick3);
-            buttonID3.setBackgroundResource(R.drawable.bluebutton);
-            Button buttonID4 = (Button) findViewById(R.id.stick4);
-            buttonID4.setBackgroundResource(R.drawable.bluebutton);
-            Button buttonID5 = (Button) findViewById(R.id.stick5);
-            buttonID5.setBackgroundResource(R.drawable.bluebutton);
+            if (smartySmart.getPlay2Score() <4)
+            {
+                Button buttonID2 = (Button) findViewById(R.id.stick2);
+                buttonID2.setBackgroundResource(R.drawable.bluebutton);
+            }
+            else
+            {
+                Button buttonID2 = (Button) findViewById(R.id.stick2);
+                buttonID2.setBackgroundResource(R.drawable.graybutton);
+                buttonID2.setEnabled(false);
+            }
+            if (smartySmart.getPlay2Score() <3)
+            {
+                Button buttonID3 = (Button) findViewById(R.id.stick3);
+                buttonID3.setBackgroundResource(R.drawable.bluebutton);
+            }
+            else
+            {
+                Button buttonID3 = (Button) findViewById(R.id.stick3);
+                buttonID3.setBackgroundResource(R.drawable.graybutton);
+                buttonID3.setEnabled(false);
+            }
+            if (smartySmart.getPlay2Score() <2)
+            {
+                Button buttonID4 = (Button) findViewById(R.id.stick4);
+                buttonID4.setBackgroundResource(R.drawable.bluebutton);
+            }
+            else
+            {
+                Button buttonID4 = (Button) findViewById(R.id.stick4);
+                buttonID4.setBackgroundResource(R.drawable.graybutton);
+                buttonID4.setEnabled(false);
+            }
+            if (smartySmart.getPlay2Score() <1)
+            {
+                Button buttonID5 = (Button) findViewById(R.id.stick5);
+                buttonID5.setBackgroundResource(R.drawable.bluebutton);
+            }
+            else
+            {
+                Button buttonID5 = (Button) findViewById(R.id.stick5);
+                buttonID5.setBackgroundResource(R.drawable.graybutton);
+                buttonID5.setEnabled(false);
+            }
         }
     }
 

@@ -11,15 +11,27 @@ import android.widget.Toast;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 public class ServerActivity extends AppCompatActivity {
 
     public static String SERVER_LOYOLA = "http://jpirone.cs.loyola.edu/server/IOserver.php";
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_server);
+
+        // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
+        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
+
+        adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     public void serverComm(View v)
@@ -91,8 +103,6 @@ public class ServerActivity extends AppCompatActivity {
                     hashMap.put(sb.toString(), answer);
                     count = 1;
                 }
-
-
             }
         }
 
@@ -102,6 +112,21 @@ public class ServerActivity extends AppCompatActivity {
             Log.w("MA", "Entry: " + entry.getKey() + entry.getValue());
         }
     }
+
+
+
+
+        /*
+        public void sendEmail(View v)
+        {
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                    "mailto","abc@gmail.com", null));
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "Body");
+            startActivity(Intent.createChooser(emailIntent, "Send email..."));
+        }
+*/
+
 
     public void goback(View v)
     {

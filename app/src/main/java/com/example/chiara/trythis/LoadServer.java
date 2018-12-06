@@ -1,5 +1,6 @@
 package com.example.chiara.trythis;
 
+
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -12,20 +13,13 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.Scanner;
 
-public class ServerTask extends AsyncTask<String, Void, String> {
+public class LoadServer extends AsyncTask<String, Void, String> {
 
-    private ServerActivity activity;
-    private String question;
-    private String author;
-    private String answer;
+    private QuestionActivity qActivity;
 
-
-    public ServerTask( ServerActivity activity, String question, String answer, String author )
+    public LoadServer( QuestionActivity activity )
     {
-        this.question = question;
-        this.answer = answer;
-        this.author = author;
-        this.activity = activity;
+        this.qActivity = activity;
     }
 
     public String doInBackground( String... urls )
@@ -38,13 +32,12 @@ public class ServerTask extends AsyncTask<String, Void, String> {
             // get a URLConnection
             URLConnection connection = url.openConnection();
             connection.setDoOutput( true );
-            // get output stream
             OutputStream os = connection.getOutputStream();
             // write
             OutputStreamWriter osw = new OutputStreamWriter( os );
 
             // should use URLEncoder class to encode data
-            String data = "question="+question+"&answer="+answer+"&author="+author;
+            String data = "";
             //String data = "question=here&answer=hi&author=me";
             osw.write( data );
             osw.flush();
@@ -70,7 +63,8 @@ public class ServerTask extends AsyncTask<String, Void, String> {
 
     public void onPostExecute( String result )
     {
-        activity.update(result);
+        qActivity.update(result);
     }
 }
+
 
