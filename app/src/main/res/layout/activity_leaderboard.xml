@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LeaderBoardActivity">
+
+    <TextView
+        style="@style/QuestionStyle"
+        android:id="@+id/leaderLabel"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:textSize="35dp"
+        android:text="High Score LeaderBoard"
+        />
+    <TextView
+        style="@style/Label"
+        android:id="@+id/nameScore"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/leaderLabel"
+        android:textSize="25dp"
+        android:fontFamily="casual"
+        android:textAlignment="center"
+        android:background="@color/Blue"
+        android:textColor="@color/White"
+        android:text=" Name   Score"
+        />
+
+    <TextView
+        style="@style/Label"
+        android:id="@+id/first"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/nameScore"
+        android:textSize="25dp"
+        android:fontFamily="casual"
+        android:textAlignment="center"
+        android:background="@color/Blue"
+        android:textColor="@color/White"
+        android:text=" "
+        />
+    <TextView
+        style="@style/Label"
+        android:id="@+id/second"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/first"
+        android:textSize="25dp"
+        android:fontFamily="casual"
+        android:textAlignment="center"
+        android:text="Sarah 2"
+        android:background="@color/Blue"
+        android:textColor="@color/White"
+        />
+
+
+
+
+    <Button
+        android:id="@+id/goToMainButton"
+        style="@style/Button"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_below="@+id/second"
+        android:layout_centerHorizontal="true"
+        android:background="@color/Yellow"
+        android:text="Next Turn"
+        android:textSize="16sp"
+        android:onClick="goHome"
+        />
+
+</RelativeLayout>

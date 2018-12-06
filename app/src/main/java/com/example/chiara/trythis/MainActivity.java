@@ -50,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
-    /*public void checkGameOver(View v)
+    public void goToLeaderBoard(View v)
     {
-        Intent intent = new Intent(this, winnerActivity.class);
+        Intent intent = new Intent(this, LeaderBoardActivity.class);
         this.startActivity(intent);
-    }*/
+    }
 }

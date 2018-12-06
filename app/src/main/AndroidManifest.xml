@@ -42,6 +42,7 @@
         </activity>
         <activity android:name=".ServerActivity"></activity>
         <activity android:name=".winnerActivity"></activity>
+        <activity android:name=".LeaderBoardActivity"></activity>
     </application>
 
 </manifest>
