@@ -20,11 +20,13 @@
         android:layout_marginTop="20dp"
         android:layout_below="@+id/leaderLabel"
         android:textSize="25dp"
+        android:layout_width="1.3in"
+        android:layout_centerHorizontal="true"
         android:fontFamily="casual"
         android:textAlignment="center"
         android:background="@color/Blue"
         android:textColor="@color/White"
-        android:text=" Name   Score"
+        android:text="Player   Score"
         />
 
     <TextView
