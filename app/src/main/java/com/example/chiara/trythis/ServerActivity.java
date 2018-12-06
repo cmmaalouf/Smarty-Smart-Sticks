@@ -2,10 +2,14 @@ package com.example.chiara.trythis;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ServerActivity extends AppCompatActivity {
 
@@ -55,6 +59,48 @@ public class ServerActivity extends AppCompatActivity {
     {
         TextView all = (TextView) findViewById(R.id.all);
         all.setText("From server: " + s);
+
+        String split[] = s.split("#");
+
+        HashMap<String, String> hashMap = new HashMap<String, String>();
+        String question = "";
+        String answer = "";
+        String author = "";
+
+        int count = 1;
+        for(String str : split)
+        {
+            //Log.w("MA", count + " " + str);
+            String info[] = str.split(";");
+            for(String string : info)
+            {
+                //Log.w("MA", count + " " + string);
+                if(count == 1) {
+                    question = string;
+                    count++;
+                }
+                else if(count == 2) {
+                    answer = string;
+                    count++;
+                }
+                else
+                {
+                    author = string;
+                    StringBuilder sb = new StringBuilder();
+                    sb.append("From " + author + " " + question);
+                    hashMap.put(sb.toString(), answer);
+                    count = 1;
+                }
+
+
+            }
+        }
+
+
+        for(Map.Entry<String, String> entry : hashMap.entrySet())
+        {
+            Log.w("MA", "Entry: " + entry.getKey() + entry.getValue());
+        }
     }
 
     public void goback(View v)

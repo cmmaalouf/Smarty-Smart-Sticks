@@ -7,9 +7,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/smarty_title"
+        android:icon="@mipmap/smarty"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/smarty_title"
+        android:roundIcon="@mipmap/smarty"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
