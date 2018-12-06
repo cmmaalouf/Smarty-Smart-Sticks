@@ -7,9 +7,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/sticks"
+        android:icon="@mipmap/sticks_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/sticks"
+        android:roundIcon="@mipmap/sticks_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
