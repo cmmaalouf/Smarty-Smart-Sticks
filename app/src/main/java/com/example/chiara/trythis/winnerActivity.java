@@ -61,8 +61,15 @@ public class winnerActivity extends Activity {
     {
         EditText wordET = (EditText) findViewById(R.id.enterUsername);
         String username = wordET.getText().toString().toLowerCase().trim();
-        editor.putInt(username, sharedPref.getInt(username, 1));
-        editor.commit();
+        if(sharedPref.getInt(username,0)==0) {
+            editor.putInt(username, sharedPref.getInt(username, 1));
+            editor.commit();
+        }
+        else
+        {
+            editor.putInt(username, sharedPref.getInt(username, 1)+1);
+            editor.commit();
+        }
         Button submit = (Button) findViewById(R.id.submitUserName);
         submit.setEnabled(false);
         submit.setBackgroundColor(getResources().getColor(R.color.Gray));

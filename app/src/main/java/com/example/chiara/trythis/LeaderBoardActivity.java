@@ -40,9 +40,31 @@ public class LeaderBoardActivity extends AppCompatActivity {
                 allScores.remove(top);
             }
         }
-        TextView high_score = (TextView)(findViewById(R.id.first));
-        String bestScore = top5names.get(0)+"\t"+sharedPref.getInt(top5names.get(0),0);
-        high_score.setText(bestScore);
+        if(top5names.get(0).trim()!="") {
+            TextView high_score1 = (TextView) (findViewById(R.id.first));
+            String bestScore1 = top5names.get(0) + "\t\t" + sharedPref.getInt(top5names.get(0), 0);
+            high_score1.setText(bestScore1.toUpperCase());
+        }
+        if(top5names.get(1).trim()!="") {
+            TextView high_score2 = (TextView) (findViewById(R.id.second));
+            String bestScore2 = top5names.get(1) + "\t" + sharedPref.getInt(top5names.get(1), 0);
+            high_score2.setText(bestScore2.toUpperCase());
+        }
+        if(top5names.get(2).trim()!="") {
+            TextView high_score3 = (TextView) (findViewById(R.id.third));
+            String bestScore3 = top5names.get(2) + "\t" + sharedPref.getInt(top5names.get(2), 0);
+            high_score3.setText(bestScore3.toUpperCase());
+        }
+        if(top5names.get(3).trim()!="") {
+            TextView high_score4 = (TextView) (findViewById(R.id.fourth));
+            String bestScore4 = top5names.get(3) + "\t" + sharedPref.getInt(top5names.get(3), 0);
+            high_score4.setText(bestScore4.toUpperCase());
+        }
+        if(top5names.get(4).trim()!="") {
+            TextView high_score5 = (TextView) (findViewById(R.id.fifth));
+            String bestScore5 = top5names.get(4) + "\t" + sharedPref.getInt(top5names.get(4), 0);
+            high_score5.setText(bestScore5.toUpperCase());
+        }
     }
 
     public String findMax(Map<String,? > map)
