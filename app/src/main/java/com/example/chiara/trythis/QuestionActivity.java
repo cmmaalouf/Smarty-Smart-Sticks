@@ -49,7 +49,7 @@ public class QuestionActivity extends AppCompatActivity {
         //Log.w( "MainActivity", "score = " + sss.getScore());
         String answer = wordET.getText().toString().toLowerCase().trim();
 
-        if (answer.equals(sss.getAnswer()))
+        if (answer.equals(sss.getAnswer().toLowerCase().trim()))
         {
             Button buttonSubmit = (Button) findViewById(R.id.submit);
             buttonSubmit.setBackgroundColor(Color.GRAY);
