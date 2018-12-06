@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToLeaderBoard(View v)
     {
+        Intent firstIntent = new Intent(this, winnerActivity.class);
+        this.startActivity(firstIntent);
         Intent intent = new Intent(this, LeaderBoardActivity.class);
         this.startActivity(intent);
     }

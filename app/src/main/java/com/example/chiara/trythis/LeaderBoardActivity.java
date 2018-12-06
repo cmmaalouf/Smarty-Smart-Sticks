@@ -14,9 +14,9 @@ public class LeaderBoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        //TextView high_score = (TextView)(findViewById(R.id.Best_Score));
-        //String bestScore = "Best Score: "+sharedPref.getInt(getString(R.string.bestScore),0);
-        //high_score.setText(bestScore);
+        TextView high_score = (TextView)(findViewById(R.id.first));
+        String bestScore = "Best Score: "+sharedPref.getInt("chiara",0);
+        high_score.setText(bestScore);
     }
 
     public void goHome(View view)
