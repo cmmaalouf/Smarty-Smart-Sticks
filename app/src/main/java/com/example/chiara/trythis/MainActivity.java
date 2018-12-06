@@ -49,4 +49,10 @@ public class MainActivity extends AppCompatActivity {
                 });
         alertDialog.show();
     }
+
+    public void checkGameOver(View v)
+    {
+        Intent intent = new Intent(this, winnerActivity.class);
+        this.startActivity(intent);
+    }
 }

@@ -32,6 +32,9 @@ public class GameActivity extends Activity {
         if (smartySmart.getPlay1Score() ==5 || smartySmart.getPlay2Score() ==5)
         {
             Log.w( "MainActivity", "WINNING score = " );
+            Intent intent = new Intent(this, winnerActivity.class);
+            this.startActivity( intent );
+            overridePendingTransition( R.anim.slide_from_right, 0 );
             this.finish();
             overridePendingTransition(R.anim.fade_in_scale, 0);
         }

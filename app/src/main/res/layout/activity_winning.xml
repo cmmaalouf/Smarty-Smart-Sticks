@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".winnerActivity">
+
+    <TextView
+        style="@style/QuestionStyle"
+        android:id="@+id/youWin"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:textSize="50dp"
+        android:text="YOU WIN!!!"
+        />
+
+    <TextView
+        style="@style/Label"
+        android:id="@+id/saveWin"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/youWin"
+        android:textSize="25dp"
+        android:fontFamily="casual"
+        android:textAlignment="center"
+        android:text="Enter your name to save your win!"
+        />
+
+
+    <EditText
+        android:id="@+id/enterUsername"
+        style="@style/InputStyle"
+        android:layout_below="@+id/saveWin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="28sp"
+        android:hint="Enter here!"
+        android:layout_width="200dp"
+        />
+
+
+    <ImageButton
+        android:id="@+id/emailButton"
+        android:layout_width="109dp"
+        android:layout_height="125dp"
+        android:layout_below="@id/enterUsername"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:src="@drawable/gmail"
+        android:onClick="sendEmail"/>
+
+    <Button
+        android:id="@+id/goToMainButton"
+        style="@style/Button"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_below="@+id/emailButton"
+        android:layout_centerHorizontal="true"
+        android:background="@color/Yellow"
+        android:text="Next Turn"
+        android:textSize="16sp"
+        android:onClick="goHome"
+        />
+
+</RelativeLayout>

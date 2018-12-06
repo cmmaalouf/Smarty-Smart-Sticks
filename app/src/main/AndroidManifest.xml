@@ -41,6 +41,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ServerActivity"></activity>
+        <activity android:name=".winnerActivity"></activity>
     </application>
 
 </manifest>

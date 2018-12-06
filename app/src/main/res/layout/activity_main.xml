@@ -56,6 +56,7 @@
         android:layout_width="2in"
         android:background="@drawable/yellowbutton"
         android:text="High Score Leader Board"
+        android:onClick="checkGameOver"
         />
 
 
